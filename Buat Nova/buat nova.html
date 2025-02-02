@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ngegombal Pacar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            text-align: center;
+            padding: 50px;
+            transition: background 0.5s ease-in-out;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+        .container:hover {
+            transform: scale(1.05);
+        }
+        h1 {
+            color: #ff4d6d;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+            transition: opacity 0.5s ease-in-out;
+        }
+        button {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        button:hover {
+            background-color: #ff1e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hai Nova Amelia Purti ❤️</h1>
+        <p id="gombalan">Kamu tahu nggak? Aku nggak butuh Google lagi, soalnya semua yang aku cari ada di kamu. 😘</p>
+        <button onclick="gantiGombalan()">Sampean Penek Iki Yangg !</button>
+    </div>
+
+    <script>
+        const gombalanList = [
+            "Kamu itu seperti kopi, selalu bikin aku ketagihan ☕❤️.",
+            "Kalau aku jadi fotomu, aku bakal selalu dekat di hatimu 📸💖.",
+            "Kamu tahu nggak? Aku nggak bisa matematika, tapi aku tahu kalau kita itu pasangan sempurna! ➕💑.",
+            "Aku nggak butuh cahaya lagi, karena senyumanmu sudah cukup menerangi hariku 🌞😊.",
+            "Hujan aja turun ke bumi, masa kamu nggak mau turun ke hatiku? ☔💓."
+        ];
+
+        function gantiGombalan() {
+            const gombalanElement = document.getElementById("gombalan");
+            const randomIndex = Math.floor(Math.random() * gombalanList.length);
+            gombalanElement.style.opacity = 0;
+            setTimeout(() => {
+                gombalanElement.textContent = gombalanList[randomIndex];
+                gombalanElement.style.opacity = 1;
+            }, 500);
+        }
+    </script>
+</body>
+</html>
